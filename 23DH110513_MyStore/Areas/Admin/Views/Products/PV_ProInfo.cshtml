@@ -1,0 +1,42 @@
+﻿@model _23DH110513_MyStore.Models.Product
+
+
+<head>
+    <style>
+        img {
+            height: 250px;
+            max-width: 250px;
+            margin-right: 20px; /* Adds space between image and text */
+        }
+
+        .div-horizontal {
+            display: flex; /* Flexbox layout for horizontal alignment */
+            align-items: flex-start; /* Aligns content at the top */
+        }
+    </style>
+</head>
+
+<div class="container-fluid">
+    <div class="div-horizontal">
+        <div class="col-md-3">
+            <img src="@Html.DisplayFor(model => model.ProductImage)" />
+        </div>
+        <div class="col-md-9">
+            <dl>
+                <dt>Tên sản phẩm</dt>
+                <dd>@Html.DisplayFor(model => model.ProductName)</dd>
+
+                <dt>Mô tả</dt>
+                <dd>@Html.DisplayFor(model => model.ProductDescription)</dd>
+
+                <dt>Đơn giá</dt>
+                <dd>@Html.DisplayFor(model => model.ProductPrice)</dd>
+
+                <dt>Danh mục</dt>
+                <dd>@Html.DisplayFor(model => model.Category.CategoryName)</dd>
+
+
+            </dl>
+        </div>
+    </div>
+</div>
